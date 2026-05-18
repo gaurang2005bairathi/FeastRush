@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 124 58 237;
+    --color-teal: 13 148 136;
+  }
+
+  * {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-sans antialiased bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-500 rounded-full;
+  }
+
+  ::selection {
+    @apply bg-primary-200 dark:bg-primary-900;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-black/20 backdrop-blur-md border border-white/10;
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 shadow-glow hover:shadow-lg hover:scale-105 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:scale-105 active:scale-95;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary-500 text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900/20 font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:scale-105 active:scale-95;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-900 rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .badge-veg {
+    @apply badge bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400;
+  }
+
+  .badge-nonveg {
+    @apply badge bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-teal-500 bg-clip-text text-transparent;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white;
+  }
+
+  .blob {
+    @apply animate-blob;
+  }
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
