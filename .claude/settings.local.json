@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git rm *)",
+      "Bash(Test-NetConnection -ComputerName ac-pegxm5u-shard-00-00.ljlproh.mongodb.net -Port 27017)",
+      "PowerShell(Test-NetConnection -ComputerName ac-pegxm5u-shard-00-00.ljlproh.mongodb.net -Port 27017)"
+    ]
+  }
+}
